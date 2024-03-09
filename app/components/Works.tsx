@@ -1,10 +1,9 @@
 import work1 from '../img/work1.png'
 import work2 from '../img/work2.png'
 import work3 from '../img/work3.png'
-
 import Image from "next/image";
 
-export default function() {
+export default function Works() {
     return (
         <div className="works">
             <h2>Featured works</h2>
