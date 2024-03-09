@@ -17,8 +17,12 @@ p {
     font-family: Heebo;
     color: #21243D;
     background-color: #FFFFFF;
-    /* height: auto;
-    width: auto; */
+}
+
+nav,
+footer {
+    color: #21243D;
+    background-color: #FFFFFF;
 }
 
 a {
@@ -36,6 +40,115 @@ a {
     flex-direction: column;
     max-width: 1152px;
     height: auto;
+}
+
+/* login */
+
+.page_login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.login_window {
+
+    height: 240px;
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #2f2b2b;
+    background-color: #FFFFFF;
+
+}
+
+.login_window h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
+}
+
+.login_form {
+    width: 302px;
+    height: 190px;
+    margin-top: auto;
+}
+
+label {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+
+}
+
+input {
+    width: 276px;
+    height: 16px;
+    border: 1px solid #D4D6DE;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    outline: none;
+    padding: 7px 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+input:hover {
+    border: 1px solid #FFFFFF;
+    outline: 1px solid #00A8CC;
+}
+
+input:active {
+    border: 1px solid #00A8CC;
+    outline: 1px solid #00A8CC;
+}
+
+input:focus {
+    outline: 1px solid #00A8CC;
+    border: 1px solid #00A8CC;
+}
+
+.login_input .password_input {
+    color: #2b2828;
+    font-size: 2px;
+}
+
+.btn_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_login {
+    width: 140px;
+    height: 47px;
+    color: #FFFFFF;
+    background-color: #FF6464;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
+    border: none;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: #b13636;
+}
+
+.disabled,
+.disabled:hover {
+    opacity: 0.3;
+    background: #8695A4;
+    cursor: not-allowed;
 }
 
 /* nav */
@@ -57,7 +170,6 @@ a {
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    /* font-family: Heebo; */
     font-size: 20px;
     font-weight: 500;
     line-height: 29px;
@@ -145,7 +257,8 @@ a {
     border-radius: 2px;
 }
 
-.btn a {
+.btn a,
+.btn_login a {
     color: #FFFFFF;
 }
 
@@ -188,6 +301,7 @@ a {
 .post {
     max-width: 418px;
     border-radius: 4px;
+    box-shadow: 0px 4px 10px 0px #BBE1FA40;
 }
 
 .date {
@@ -221,7 +335,6 @@ a {
 }
 
 /* works */
-
 .works {
     max-width: 856px;
     display: flex;
@@ -245,15 +358,12 @@ a {
 }
 
 .work-img {
-    /* width: 246px;
-    height: 180px; */
     width: 246px;
     height: 180px;
     border-radius: 6px;
 }
 
 .works h2 {
-    /* font-family: Heebo; */
     font-size: 22px;
     font-weight: 400;
     line-height: 60px;
@@ -283,7 +393,6 @@ a {
     margin-right: 26px;
     background: #142850;
     border-radius: 16px;
-    /* font-family: Heebo; */
     font-size: 18px;
     font-weight: 900;
     line-height: 60px;
@@ -292,7 +401,6 @@ a {
 }
 
 .work p {
-    /* font-family: Heebo; */
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -302,8 +410,6 @@ a {
 
 /* footer(contact) */
 .contact {
-    /* margin-top: auto;
-    margin-bottom: 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -322,7 +428,6 @@ a {
 
 .contact p {
     text-align: center;
-    /* font-family: Heebo; */
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -361,7 +466,6 @@ a {
 
     .header-container {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         flex-direction: column;
         gap: 20px;
@@ -449,12 +553,6 @@ a {
         z-index: 2;
     }
 
-
-
-    /* .btn-menu--active {
-           z-index: 3;
-        } */
-
     .nav-page.active {
         transform: translateX(-98%);
     }
@@ -497,11 +595,13 @@ a {
     }
 
     .photo {
+        padding-left: 5px;
         width: 172px;
         height: 172px;
     }
 
     .elipse {
+        padding-top: 8px;
         width: 172px;
         height: 172px;
     }
@@ -534,10 +634,9 @@ a {
     }
 
     .post {
-        box-shadow: 0px 4px 10px 0px #BBE1FA40;
         min-width: 344px;
-        padding-left: calc((100vw - 344px)/2);
-        padding-right: calc((100vw - 344px)/2);
+        margin-left: calc((100vw - 344px)/2);
+        margin-right: calc((100vw - 344px)/2);
     }
 
     .post h2 {

@@ -19,44 +19,51 @@ export default function Navbar() {
         setOpen(false)
     }
 
-  return (
-      <nav className="container">
-          <div className="nav-container">
-              <div className={`nav-page ${isOpen ? "active" : ""}`}>
-                  <Link
-                      href="/"
-                      onClick={closeMenu}
-                  >
-                      Home
-                  </Link>
-                  {/* <Link
-                href="/about"
-              >
-               Works
-              </Link> */}
-                  <Link
-                      href="/about"
-                      onClick={closeMenu}
-                  >
-                      Blog
-                  </Link>
-                  <Link
-                      href="/about"
-                      onClick={closeMenu}
-                  >
-                      Contacts
-                  </Link>
-              </div>
-                  {isOpen ? (
-                      <button className="btn-menu-close" onClick={toggleMenu}>
-                      <Image className="menu" src={menu_close} alt="menu"></Image>
-                      </button>
-              ) : (
-                      <button className="btn-menu" onClick={toggleMenu}>
-                  <Image className="menu" src={menu} alt="menu"></Image>
-                  </button>
+    return (
+        <nav className="container">
+            <div className="nav-container">
+                <div className={`nav-page ${isOpen ? "active" : ""}`}>
+                    <Link
+                        href="/home"
+                        onClick={closeMenu}
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/home/about"
+                        onClick={closeMenu}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        href="/home/work"
+                        onClick={closeMenu}
+                    >
+                        Works
+                    </Link>
+                    <Link
+                        href="/home/contact"
+                        onClick={closeMenu}
+                    >
+                        Contacts
+                    </Link>
+                    <Link
+                        href="/"
+                        onClick={closeMenu}
+                    >
+                        Logout
+                    </Link>
+                </div>
+                {isOpen ? (
+                    <button className="btn-menu-close" onClick={toggleMenu}>
+                        <Image className="menu" src={menu_close} alt="menu"></Image>
+                    </button>
+                ) : (
+                    <button className="btn-menu" onClick={toggleMenu}>
+                        <Image className="menu" src={menu} alt="menu"></Image>
+                    </button>
                 )}
-          </div>
-      </nav>
-  )
+            </div>
+        </nav>
+    )
 }
