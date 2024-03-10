@@ -24,8 +24,6 @@ export default function Login() {
     };
 
     return (
-        // <header className="header-container">
-        //     <div className="header">
         <div className='login_window'>
             <h1>Login</h1>
             <form className='login_form' onSubmit={handleSubmit}>
@@ -38,25 +36,23 @@ export default function Login() {
                     <input name='password' type="password" placeholder='Enter password' value={password} onChange={handlePasswordChange} />
                 </div>
                 <div className='btn_section'>
-                    {/* <NavLink to='/pageforgot' className='nav'>
-                            <BtnForgot />
-                        </NavLink> */}
-                    <button className="btn_login" type='submit'>
-                        <Link href='/signup'>
+                    <Link href='/signup'>
+                        <button className="btn_login" type='submit'>
                             Sign up
-                        </Link>
-                    </button>
-                    <button className={`btn_login ${isDisabled ? 'disabled' : ''}`} type='submit' disabled={isDisabled}>
+                        </button>
+                    </Link>
+                    {/* <button className={`btn_login ${isDisabled ? 'disabled' : ''}`} type='submit' disabled={isDisabled}>
                         <Link href='/home'>
                             Login
                         </Link>
-                    </button>
-                    {/* <Btn /> */}
+                    </button> */}
+                    <Link href={isDisabled ? '#' : '/home'}>
+                        <button className={`btn_login ${isDisabled ? 'disabled' : ''}`} type='submit' disabled={isDisabled}>
+                            Login
+                        </button>
+                    </Link>
                 </div>
             </form>
         </div>
-
-        // </div> 
-        // </header>
     )
 }

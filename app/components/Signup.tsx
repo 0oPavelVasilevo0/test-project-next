@@ -36,25 +36,18 @@ export default function Signup() {
                     <input name='password' type="password" placeholder='Enter password' value={password} onChange={handlePasswordChange} />
                 </div>
                 <div className='btn_section'>
-                    {/* <NavLink to='/pageforgot' className='nav'>
-                            <BtnForgot />
-                        </NavLink> */}
-                    <button className="btn_login" type='submit'>
-                        <Link href='/'>
+                    <Link href='/'>
+                        <button className="btn_login" type='submit'>
                             Login
-                        </Link>
-                    </button>
-                    <button className={`btn_login ${isDisabled ? 'disabled' : ''}`} type='submit' disabled={isDisabled}>
-                        <Link href='/home'>
+                        </button>
+                    </Link>
+                    <Link href={isDisabled ? '#' : '/home'}>
+                        <button className={`btn_login ${isDisabled ? 'disabled' : ''}`} type='submit' disabled={isDisabled}>
                             Signup
-                        </Link>
-                    </button>
-                    {/* <Btn /> */}
+                        </button>
+                    </Link>
                 </div>
             </form>
         </div>
-
-        // </div> 
-        // </header>
     )
 }
