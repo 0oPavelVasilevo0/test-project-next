@@ -313,7 +313,10 @@ input:focus {
 }
 
 .post {
+    background: #FFFFFF;
     max-width: 418px;
+    min-height: 248px;
+    padding: 24px;
     border-radius: 4px;
     box-shadow: 0px 4px 10px 0px #BBE1FA40;
 }
@@ -332,13 +335,17 @@ input:focus {
     border-left: 1px solid black;
 }
 
-.post h2,
+/* .post h2,
 .post p {
     padding: 24px;
-}
+} */
 
-.post .date {
+/* .post .date {
     padding: 0 24px;
+} */
+
+.first-p {
+    padding: 14px 0;
 }
 
 .post p {
@@ -508,6 +515,10 @@ input:focus {
         align-items: center;
     }
 
+    .post {
+        max-width: 370px;
+    }
+
     .post-header {
         max-width: 418px;
         display: flex;
@@ -648,7 +659,7 @@ input:focus {
     }
 
     .post {
-        min-width: 344px;
+        min-width: 296px;
         margin-left: calc((100vw - 344px)/2);
         margin-right: calc((100vw - 344px)/2);
     }

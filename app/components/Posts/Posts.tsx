@@ -12,7 +12,7 @@ export default function Posts() {
                     return (
                         <div key={post.id} className="post">
                             <h2>{post.name}</h2>
-                            <p>{post.date}<span className='line' />{post.skills}</p>
+                            <p className="first-p">{post.date}<span className='line' />{post.skills}</p>
                             <p>{post.p}</p>
                         </div>
                     )
