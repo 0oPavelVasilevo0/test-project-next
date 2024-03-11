@@ -1,13 +1,26 @@
-import work1 from '../img/work1.png'
-import work2 from '../img/work2.png'
-import work3 from '../img/work3.png'
-import work4 from '../img/work4.png'
-import Image from "next/image";
+import { StaticImageData } from 'next/image'
+import work1 from '../../img/work1.png'
+import work2 from '../../img/work2.png'
+import work3 from '../../img/work3.png'
+import work4 from '../../img/work4.png'
 
-const listWorks = [
+//kakaia je hyita etot typescript...
+
+interface Work {
+    id: number;
+    img: StaticImageData;
+    alt: string;
+    project: string;
+    date: string;
+    name: string;
+    p: string;
+}
+
+const listWorks: Work[] = [
     {
         id: 1,
-        img: <Image src={work1} className="work-img" alt="1" />,
+        img: work1,
+        alt: "1",
         project: "Designing Dashboards",
         date: "2020",
         name: "Dashboard",
@@ -15,7 +28,8 @@ const listWorks = [
     },
     {
         id: 2,
-        img: <Image src={work2} className="work-img" alt="2" />,
+        img: work2,
+        alt: "2",
         project: "Vibrant Portraits of 2020",
         date: "2018",
         name: "Illustration",
@@ -23,7 +37,8 @@ const listWorks = [
     },
     {
         id: 3,
-        img: <Image src={work3} className="work-img" alt="3" />,
+        img: work3,
+        alt: "3",
         project: "36 Days of Malayalam type",
         date: "2018",
         name: "Typography",
@@ -31,7 +46,8 @@ const listWorks = [
     },
     {
         id: 4,
-        img: <Image src={work4} className="work-img" alt="4" />,
+        img: work4,
+        alt: "4",
         project: "Components",
         date: "2021",
         name: "Components, Design",
@@ -40,24 +56,4 @@ const listWorks = [
 
 ]
 
-export default function Works() {
-    return (
-        <div className="works">
-            <h2>Featured works</h2>
-            {listWorks.map((work) => {
-                return (
-                    <div key={work.id} className="work">
-                        <div className='img-items'>
-                            {work.img}
-                        </div>
-                        <div>
-                            <h3>{work.project}</h3>
-                            <h4><span className="work-date">{work.date}</span>{work.name}</h4>
-                            <p>{work.p}</p>
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-    )
-}
+export { listWorks };

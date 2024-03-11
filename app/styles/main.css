@@ -75,6 +75,7 @@ a {
     width: 302px;
     height: 190px;
     margin-top: auto;
+    margin-bottom: 40px;
 }
 
 label {
@@ -700,4 +701,10 @@ input:focus {
     .work-date {
         font-size: 16px;
     }
+}
+
+@media (max-height: 320px) {
+    .login_window {
+            height: auto;
+        }
 }

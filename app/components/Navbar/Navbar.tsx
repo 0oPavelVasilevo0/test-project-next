@@ -2,18 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import menu from '../img/menu.svg'
-import menu_close from '../img/menu-close.svg'
+import menu from '../../img/menu.svg'
+import menu_close from '../../img/menu-close.svg'
+import { navLinks } from "./navLinks";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-
-const navLinks = [
-    { id: 1, name: "Home", path: "/home" },
-    { id: 2, name: "About", path: "/home/about" },
-    { id: 3, name: "Works", path: "/home/work" },
-    { id: 4, name: "Contacts", path: "/home/contact" },
-    { id: 5, name: "Logout", path: "/" },
-]
 
 export default function Navbar() {
 
@@ -50,11 +43,11 @@ export default function Navbar() {
                 </div>
                 {isOpen ? (
                     <button className="btn-menu-close" onClick={toggleMenu}>
-                        <Image className="menu" src={menu_close} alt="menu"></Image>
+                        <Image className="menu" src={menu_close} alt="menu" />
                     </button>
                 ) : (
                     <button className="btn-menu" onClick={toggleMenu}>
-                        <Image className="menu" src={menu} alt="menu"></Image>
+                        <Image className="menu" src={menu} alt="menu" />
                     </button>
                 )}
             </div>
