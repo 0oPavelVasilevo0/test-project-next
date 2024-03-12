@@ -32,3 +32,56 @@ body {
     text-wrap: balance;
   }
 } */
+
+/* Sign */
+.cl-internal-17ydaof{
+  font-family: Heebo;
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px 0px #BBE1FA40;
+}
+
+.cl-internal-b3fm6y,
+.cl-internal-13zhnx0 {
+  display: none;
+}
+
+.cl-formButtonPrimary {
+  font-size: 14px;
+  text-transform: none;
+  background-color: #FF6464;
+}
+
+.cl-internal-1fsg6zy,
+.cl-internal-1bm3sy9,
+.cl-internal-mdg29y,
+.cl-internal-18ut2g5 {
+  border-radius: 2px;
+}
+
+.cl-formButtonPrimary:hover,
+.cl-formButtonPrimary:focus,
+.cl-formButtonPrimary:active {
+  background: #b13636;
+}
+
+/*sign dashboard*/
+.cl-internal-1vi7rps {
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px 0px #bbe1fa53;
+}
+
+.cl-userButtonPopoverFooter {
+  display: none;
+}
+
+@media (max-width: 460px) {
+  .cl-internal-17ydaof {
+    box-shadow: none;
+  }
+}
+
+@media (max-height: 480px) {
+    .cl-internal-17ydaof {
+      box-shadow: none;
+    }
+  }

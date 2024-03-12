@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// import "./globals.css";
-import '../../styles/main.css'
+import "./../globals.css";
+import '../styles/main.css';
 import Navbar from "@/app/components/Navbar/Navbar";
 import Footer from "@/app/components/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
 // import Navbar from "../../components/Navbar";
 // import Footer from "../../components/Footer";
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
 
   return (
+    <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
         <main className="main-container">
@@ -30,5 +32,6 @@ export default function RootLayout({
         </main>
       </body>
     </html>
+    </ClerkProvider>
   );
 }

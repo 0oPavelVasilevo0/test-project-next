@@ -44,6 +44,15 @@ a {
 
 /* login */
 
+.login-container {
+    min-height: 100vh;
+    /* margin: 10px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EDF7FA;
+}
+
 .page_login {
     font-family: Heebo;
     height: 100vh;
@@ -555,7 +564,16 @@ input:focus {
     }
 }
 
+@media (max-height: 480px) {
+    .login-container {
+        background: #FFFFFF;
+    }
+}
+
 @media (max-width: 460px) {
+    .login-container {
+        background: #FFFFFF;
+    }
 
     div.nav-container {
         padding: 0;
@@ -716,6 +734,6 @@ input:focus {
 
 @media (max-height: 320px) {
     .login_window {
-            height: auto;
-        }
+        height: auto;
+    }
 }
