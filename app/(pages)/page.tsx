@@ -1,7 +1,7 @@
-import '../styles/main.css'
-import Header from '@/app/components/Header';
-import Posts from '@/app/components/Posts/Posts';
-import Works from '@/app/components/Works/Works';
+import Header from '../components/Header';
+import Posts from '../components/Posts/Posts';
+import Works from '../components/Works/Works';
+// import '../styles/main.css'
 
 export default function Home() {
 
