@@ -1,5 +1,6 @@
-макет: [Figma] (https://www.figma.com/file/u96UjK2Kzo2bk0PhVdL5xr/John-%2B?type=design&node-id=0-1&mode=design&t=IHIkSo06OsGUWSq4-0)
-авторизация: Clerk
+макет: [Figma](https://www.figma.com/file/u96UjK2Kzo2bk0PhVdL5xr/John-%2B?type=design&node-id=0-1&mode=design&t=IHIkSo06OsGUWSq4-0).
+
+авторизация: Clerk.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
