@@ -28,41 +28,34 @@ export default function Navbar() {
 
     return (
         (isLoaded && user) && (
-        <nav className="container">
-            <div className="nav-container">
-                <div className={`nav-page ${isOpen ? 'active' : ''}`}>
-                    {navLinks.map((link) => {
-                        return (
-
-                           
-
-                                    <Link
-                                        href={link.path}
-                                        key={link.id}
-                                        className={`navlink ${isActive(link.path) ? 'navlink-active' : ''}`}
-                                        onClick={closeMenu}
-                                    >
-                                        {link.name}
-
-                                    </Link>
-
-                            
-
-                        )
-                    })}
-                    <UserButton afterSignOutUrl="/sign-in" />
+            <nav className="container">
+                <div className="nav-container">
+                    <div className={`nav-page ${isOpen ? 'active' : ''}`}>
+                        {navLinks.map((link) => {
+                            return (
+                                <Link
+                                    href={link.path}
+                                    key={link.id}
+                                    className={`navlink ${isActive(link.path) ? 'navlink-active' : ''}`}
+                                    onClick={closeMenu}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
+                        })}
+                        <UserButton afterSignOutUrl="/sign-in" />
+                    </div>
+                    {isOpen ? (
+                        <button className="btn-menu-close" onClick={toggleMenu}>
+                            <Image className="menu" src={menu_close} alt="menu" />
+                        </button>
+                    ) : (
+                        <button className="btn-menu" onClick={toggleMenu}>
+                            <Image className="menu" src={menu} alt="menu" />
+                        </button>
+                    )}
                 </div>
-                {isOpen ? (
-                    <button className="btn-menu-close" onClick={toggleMenu}>
-                        <Image className="menu" src={menu_close} alt="menu" />
-                    </button>
-                ) : (
-                    <button className="btn-menu" onClick={toggleMenu}>
-                        <Image className="menu" src={menu} alt="menu" />
-                    </button>
-                )}
-            </div>
-        </nav>
-    )
+            </nav>
+        )
     )
 }
